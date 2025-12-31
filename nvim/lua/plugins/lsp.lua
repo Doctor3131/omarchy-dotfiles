@@ -21,12 +21,14 @@ return {
 	-- lsp servers
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = { "saghen/blink.cmp" },
 		opts = {
 			inlay_hints = { enabled = false },
-			---@type lspconfig.options
+			--@type lspconfig.options
 			servers = {
 				cssls = {},
 				tailwindcss = {
+					capabilities = require("blink.cmp").get_lsp_capabilities(),
 					root_dir = function(...)
 						return require("lspconfig.util").root_pattern(".git")(...)
 					end,
