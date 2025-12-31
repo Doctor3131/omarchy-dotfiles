@@ -1,13 +1,19 @@
-# Ignore everything
+# Ignore everything by default
 *
 
-# Include specific files
+# Un-ignore specific files
 !file1.txt
 !file2.txt
-!/.gitignore
+!.gitignore
 
-# Include a specific folder and all its contents
+# Un-ignore specific folder and its contents
 !folder_name/
-!folder_name/*   
+!folder_name/**
+
+# Un-ignore nvim folder and its contents
 !nvim/
+!nvim/**
+
+# Un-ignore zed folder and its contents
 !zed/
+!zed/**
