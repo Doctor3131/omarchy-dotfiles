@@ -1,0 +1,13 @@
+# Ignore everything
+*
+
+# Include specific files
+!file1.txt
+!file2.txt
+!/.gitignore
+
+# Include a specific folder and all its contents
+!folder_name/
+!folder_name/*   
+!nvim/
+!zed/
