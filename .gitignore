@@ -5,6 +5,7 @@
 !file1.txt
 !file2.txt
 !.gitignore
+!.zshrc
 
 # Un-ignore specific folder and its contents
 !folder_name/
