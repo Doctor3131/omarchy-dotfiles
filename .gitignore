@@ -18,3 +18,13 @@
 # Un-ignore zed folder and its contents
 !zed/
 !zed/**
+
+
+# Un-ignore alacritty folder and its contents
+!alacritty/
+!alacritty/**
+
+
+# Un-ignore ghostty folder and its contents
+!ghostty/
+!ghostty/**

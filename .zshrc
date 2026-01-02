@@ -22,12 +22,17 @@ if [[ -d /usr/share/omarchy-zsh/functions ]]; then
   done
 fi
 
-# Add your own customizations below
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH=$HOME/.local/bin:$PATH
+
+# ===========================
+# zsh setup
+# ===========================
+setopt CORRECT
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # ===========================
 # Compilation and Execution
@@ -172,4 +177,14 @@ alias monitors='nwg-displays'
 ts() {
   tmux attach-session -t "$1" || tmux new-session -s "$1"
 }
+
 export PATH=$PATH:~/.spicetify
+eval $(thefuck --alias)
+
+# Add your own customizations below
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+export EZA_COLORS="gi=2;37"
