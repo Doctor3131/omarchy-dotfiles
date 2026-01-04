@@ -27,6 +27,9 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH=$HOME/.local/bin:$PATH
 
+# change alacritty opacity
+# alias transparant="sed -i 's/opacity = .*/opacity = 0.8/' ~/.config/alacritty/alacritty.toml"
+
 # ===========================
 # zsh setup
 # ===========================
@@ -152,32 +155,44 @@ alias endt8='' # Alias for section footer
 # download from google with gdown 
 alias t10='=====================gdown=============================='
 alias gdownh='https://drive.google.com/uc?id='
+alias endt10='' # Alias for section footer
 
 # tmux keybindings 
 alias t11='=====================fzf================================'
 alias 'search command history'='C+r'
 alias 'search files and dir'='C+t'
 alias 'change dir using fzf'='Alt_c'
+alias endt11='' # Alias for section footer
 
 # tmux keybindings 
 alias t12='=====================tmux==============================='
 alias create='tmux new -s create'
 alias get='tmux attach -t create'
 alias als='use "ts " for easier'
+alias endt12='' # Alias for section footer
 
 # bash keybindings
 alias t13='=====================bash==============================='
 alias ssn='hyprctl dispatch exec "[class:main-screensaver;fullscreen;monitor 0]" "alacritty --class main-screensaver -e bash ~/.local/share/omarchy/bin/omarchy-cmd-screensaver-current"'
+alias endt13='' # Alias for section footer
 
 # monitors keybindings
-alias t13='=====================monitors==============================='
+alias t14='=====================monitors==============================='
 alias monitors='nwg-displays'
+alias endt14='' # Alias for section footer
 
+# toggle transparancy keybindings
+alias t15='=====================toggletransparency==============================='
+alias toggletransparency='if grep -q "opacity = 0.8" ~/.config/alacritty/alacritty.toml; then sed -i "s/opacity = .*/opacity = 1.0/" ~/.config/alacritty/alacritty.toml; else sed -i "s/opacity = .*/opacity = 0.8/" ~/.config/alacritty/alacritty.toml; fi'
+alias toggle='if grep -q "opacity = 0.8" ~/.config/alacritty/alacritty.toml; then sed -i "s/opacity = .*/opacity = 1.0/" ~/.config/alacritty/alacritty.toml; else sed -i "s/opacity = .*/opacity = 0.8/" ~/.config/alacritty/alacritty.toml; fi'
+alias endt15='' # Alias for section footer
 
+# tmux attach or create session
 ts() {
   tmux attach-session -t "$1" || tmux new-session -s "$1"
 }
 
+# Spicetify
 export PATH=$PATH:~/.spicetify
 eval $(thefuck --alias)
 
