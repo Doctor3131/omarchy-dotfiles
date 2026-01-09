@@ -10,13 +10,49 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
-    }
+    },
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       // "j k": "vim::NormalBefore"
-    }
+    },
+  },
+  {
+    "bindings": {
+      "space space": [
+        "task::Spawn",
+        {
+          "task_name": "Television File Finder (Dirs)",
+          "reveal_target": "center",
+        },
+      ],
+      "space f f": [
+        "task::Spawn",
+        {
+          "task_name": "Television File Finder (Root)",
+          "reveal_target": "center",
+        },
+      ],
+    },
+  },
+  {
+    "bindings": {
+      "; f": [
+        "task::Spawn",
+        {
+          "task_name": "Television File Finder",
+          "reveal_target": "center",
+        },
+      ],
+      "s f": [
+        "task::Spawn",
+        {
+          "task_name": "Television File Finder",
+          "reveal_target": "center",
+        },
+      ],
+    },
   },
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
@@ -26,10 +62,9 @@
       "space l f": "editor::Format",
       "space d": "diagnostics::Deploy",
 
-      "space f f": "file_finder::Toggle",
-      "; f": "file_finder::Toggle",
-      "s f": "file_finder::Toggle",
-      "space space": "file_finder::Toggle",
+      // "; f": "file_finder::Toggle",
+      // "s f": "file_finder::Toggle",
+      // "space space": "file_finder::Toggle",
       "\\ \\": "tab_switcher::Toggle",
       "; ;": "tab_switcher::Toggle",
 
@@ -46,15 +81,15 @@
       "s h": "workspace::ActivatePaneLeft",
       "s l": "workspace::ActivatePaneRight",
       "s k": "workspace::ActivatePaneUp",
-      "s j": "workspace::ActivatePaneDown"
-    }
+      "s j": "workspace::ActivatePaneDown",
+    },
   },
   {
     "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
     "bindings": {
       "shift-j": "editor::MoveLineDown",
-      "shift-k": "editor::MoveLineUp"
-    }
+      "shift-k": "editor::MoveLineUp",
+    },
   },
   {
     "context": "Dock || Terminal || Editor",
@@ -65,7 +100,7 @@
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-alt-a": "workspace::ToggleRightDock",
       "space e": "workspace::ToggleLeftDock",
-      "space /": "workspace::NewSearch"
-    }
-  }
+      "space /": "workspace::NewSearch",
+    },
+  },
 ]
