@@ -30,6 +30,10 @@ export PATH=$HOME/.local/bin:$PATH
 # change alacritty opacity
 # alias transparant="sed -i 's/opacity = .*/opacity = 0.8/' ~/.config/alacritty/alacritty.toml"
 
+# case-insansitive match
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
 # ===========================
 # zsh setup
 # ===========================

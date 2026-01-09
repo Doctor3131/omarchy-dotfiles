@@ -25,10 +25,15 @@
       "shift-k": "editor::Hover",
       "space l f": "editor::Format",
       "space d": "diagnostics::Deploy",
+
       "space f f": "file_finder::Toggle",
       "; f": "file_finder::Toggle",
-      // "space o": "tab_switcher::Toggle",
+      "s f": "file_finder::Toggle",
+      "space space": "file_finder::Toggle",
       "\\ \\": "tab_switcher::Toggle",
+      "; ;": "tab_switcher::Toggle",
+
+      // "space o": "tab_switcher::Toggle",
       "n": "search::SelectNextMatch",
       "shift-n": "search::SelectPreviousMatch",
       "space t": "workspace::NewCenterTerminal",

@@ -47,6 +47,12 @@
   },
   "cursor_blink": false,
   "relative_line_numbers": "enabled",
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
+    "shell": {
+      "program": "zsh"
+    }
+  },
   "scrollbar": {
     "show": "never"
   },
