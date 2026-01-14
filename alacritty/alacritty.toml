@@ -15,8 +15,8 @@ italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
 size = 12
 
 [window]
-padding.x = 14
-padding.y = 14
+padding.x = 0
+padding.y = 0
 decorations = "None"
 opacity = 0.8
 

@@ -205,5 +205,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+ZLE_RPROMPT_INDENT=0
 
 export EZA_COLORS="gi=2;37"
