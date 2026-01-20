@@ -28,3 +28,11 @@
 # Un-ignore ghostty folder and its contents
 !ghostty/
 !ghostty/**
+
+# Un-ignore hyprland folder and its contents
+!hypr/
+!hypr/**
+
+# Un-ignore wallpaper folder and its contents
+!wallpaper/
+!wallpaper/**
