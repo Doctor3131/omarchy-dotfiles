@@ -20,20 +20,20 @@
   },
   {
     "bindings": {
-      "space space": [
-        "task::Spawn",
-        {
-          "task_name": "Television File Finder (Dirs)",
-          "reveal_target": "center",
-        },
-      ],
-      "space f f": [
-        "task::Spawn",
-        {
-          "task_name": "Television File Finder (Root)",
-          "reveal_target": "center",
-        },
-      ],
+      // "space space": [
+      //   "task::Spawn",
+      //   {
+      //     "task_name": "Television File Finder (Dirs)",
+      //     "reveal_target": "center",
+      //   },
+      // ],
+      // "space f f": [
+      //   "task::Spawn",
+      //   {
+      //     "task_name": "Television File Finder (Root)",
+      //     "reveal_target": "center",
+      //   },
+      // ],
     },
   },
   {
@@ -57,10 +57,10 @@
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
-      "space b": "git::Blame",
+      // "space b": "git::Blame",
       "shift-k": "editor::Hover",
-      "space l f": "editor::Format",
-      "space d": "diagnostics::Deploy",
+      // "space l f": "editor::Format",
+      // "space d": "diagnostics::Deploy",
 
       // "; f": "file_finder::Toggle",
       // "s f": "file_finder::Toggle",
@@ -71,10 +71,10 @@
       // "space o": "tab_switcher::Toggle",
       "n": "search::SelectNextMatch",
       "shift-n": "search::SelectPreviousMatch",
-      "space t": "workspace::NewCenterTerminal",
+      // "space t": "workspace::NewCenterTerminal",
       "g c": "editor::ToggleComments",
       "+ +": "workspace::Save",
-      "space c": "pane::CloseActiveItem",
+      // "space c": "pane::CloseActiveItem",
       "ctrl-a": "editor::SelectAll",
       "s s": "pane::SplitRight",
       "s v": "pane::SplitDown",
@@ -99,8 +99,8 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-alt-a": "workspace::ToggleRightDock",
-      "space e": "workspace::ToggleLeftDock",
-      "space /": "workspace::NewSearch",
+      // "space e": "workspace::ToggleLeftDock",
+      // "space /": "workspace::NewSearch",
     },
   },
 ]

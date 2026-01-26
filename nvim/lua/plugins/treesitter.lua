@@ -121,6 +121,8 @@ return {
 				"vimdoc",
 				"xml",
 				"yaml",
+				"http",
+				"graphql",
 			},
 		},
 		---@param opts lazyvim.TSConfig
