@@ -123,6 +123,7 @@ return {
 				"yaml",
 				"http",
 				"graphql",
+				"java",
 			},
 		},
 		---@param opts lazyvim.TSConfig

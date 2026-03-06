@@ -33,3 +33,6 @@ background = "0x000000"
 [colors.cursor]
 cursor = "0xffffff"
 
+
+[terminal]
+osc52 = "CopyPaste"

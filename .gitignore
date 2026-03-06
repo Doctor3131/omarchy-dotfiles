@@ -6,6 +6,7 @@
 !file2.txt
 !.gitignore
 !.zshrc
+!.vimrc
 
 # Un-ignore specific folder and its contents
 !folder_name/

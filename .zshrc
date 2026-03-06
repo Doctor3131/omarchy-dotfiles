@@ -32,6 +32,7 @@ export PATH="$PATH:/home/sirifari/Downloads/balena/bin"
 # alias transparant="sed -i 's/opacity = .*/opacity = 0.8/' ~/.config/alacritty/alacritty.toml"
 
 # case-insansitive match
+eval "$(zoxide init zsh)"
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
@@ -39,6 +40,10 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 # zsh setup
 # ===========================
 setopt CORRECT
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
@@ -81,7 +86,7 @@ alias t4='====================List commands========================'
 
 # alias ls='eza --icons --sort=type --group-directories-first'
 alias la='eza -A --icons --sort=type --group-directories-first'
-alias l='eza -lh --git --icons --sort=type --group-directories-first'
+alias ls='eza -lh --git --icons --sort=type --group-directories-first'
 alias ll='eza -lah --git --icons --sort=type --group-directories-first'
 alias lt='eza --tree --icons --sort=type --group-directories-first'
 alias lti='eza -lT --ignore-glob=".git|node_modules" --icons --sort=type --group-directories-first'
@@ -209,3 +214,28 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZLE_RPROMPT_INDENT=0
 
 export EZA_COLORS="gi=2;37"
+
+# opencode
+export PATH=/home/sirifari/.opencode/bin:$PATH
+export EDITOR=nvim
+
+# composer
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/sirifari/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/sirifari/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/sirifari/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/sirifari/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+eval "$(tv init zsh)"
