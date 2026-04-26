@@ -222,7 +222,6 @@ export EDITOR=nvim
 # composer
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/sirifari/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
