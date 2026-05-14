@@ -7,6 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    }
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "context_servers": {
     "mcp-server-context7": {
       "enabled": true,
@@ -16,6 +33,7 @@
     }
   },
   "agent": {
+    "dock": "right",
     "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",

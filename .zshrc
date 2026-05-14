@@ -32,7 +32,7 @@ export PATH="$PATH:/home/sirifari/Downloads/balena/bin"
 # alias transparant="sed -i 's/opacity = .*/opacity = 0.8/' ~/.config/alacritty/alacritty.toml"
 
 # case-insansitive match
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
@@ -204,7 +204,7 @@ ts() {
 
 # Spicetify
 export PATH=$PATH:~/.spicetify
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # Add your own customizations below
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
@@ -237,4 +237,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-eval "$(tv init zsh)"
+# eval "$(tv init zsh)"
+eval "$(zoxide init zsh)"

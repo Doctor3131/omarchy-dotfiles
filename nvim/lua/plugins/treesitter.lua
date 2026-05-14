@@ -91,13 +91,14 @@ return {
 		opts_extend = { "ensure_installed" },
 		---@alias lazyvim.TSFeat { enable?: boolean, disable?: string[] }
 		---@class lazyvim.TSConfig: TSConfig
-		opts = {
+			opts = {
 			-- LazyVim config for treesitter
 			indent = { enable = true }, ---@type lazyvim.TSFeat
 			highlight = { enable = true }, ---@type lazyvim.TSFeat
 			folds = { enable = true }, ---@type lazyvim.TSFeat
 			ensure_installed = {
 				"bash",
+				"blade",
 				"c",
 				"diff",
 				"html",
@@ -110,6 +111,7 @@ return {
 				"luap",
 				"markdown",
 				"markdown_inline",
+				"php",
 				"printf",
 				"python",
 				"query",
