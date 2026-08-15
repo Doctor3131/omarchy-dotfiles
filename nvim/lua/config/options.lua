@@ -1,4 +1,6 @@
+require("config.remote_clipboard").setup()
 vim.g.mapleader = " "
+-- vim.g.lazyvim_python_lsp = "basedpyright"
 
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"

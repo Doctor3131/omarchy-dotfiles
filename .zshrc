@@ -239,3 +239,36 @@ unset __conda_setup
 
 # eval "$(tv init zsh)"
 eval "$(zoxide init zsh)"
+
+export PATH="$PATH:/home/sirifari/.cargo/bin"
+
+explorer() {
+    # Default to current directory if no argument is provided
+    local path="${1:-.}"
+
+    # Check if the path exists
+    if [[ ! -e "$path" ]]; then
+        echo "explorer: '$path' does not exist" >&2
+        return 1
+    fi
+
+    # Determine the OS/environment and open accordingly
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        open "$path"
+    elif [[ -n "$IS_WSL" || "$(grep -qi microsoft /proc/version 2>/dev/null; echo $?)" -eq 0 ]]; then
+        powershell.exe -c "start '$(wslpath -w "$path")'"
+    elif command -v xdg-open >/dev/null 2>&1; then
+        # Fallback to xdg-open (handles Nautilus, Dolphin, Thunar, etc. automatically)
+        xdg-open "$path" >/dev/null 2>&1 &
+        disown
+    elif command -v nautilus >/dev/null 2>&1; then
+        # Direct fallback to Nautilus if xdg-open isn't behaving
+        nautilus "$path" >/dev/null 2>&1 &
+        disown
+    else
+        echo "explorer: No compatible file manager found" >&2
+        return 1
+    fi
+}
+
+. "$HOME/.local/share/../bin/env"

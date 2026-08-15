@@ -91,7 +91,7 @@ return {
 		opts_extend = { "ensure_installed" },
 		---@alias lazyvim.TSFeat { enable?: boolean, disable?: string[] }
 		---@class lazyvim.TSConfig: TSConfig
-			opts = {
+		opts = {
 			-- LazyVim config for treesitter
 			indent = { enable = true }, ---@type lazyvim.TSFeat
 			highlight = { enable = true }, ---@type lazyvim.TSFeat
@@ -126,6 +126,7 @@ return {
 				"http",
 				"graphql",
 				"java",
+				"prisma",
 			},
 		},
 		---@param opts lazyvim.TSConfig
