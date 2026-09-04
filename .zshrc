@@ -197,6 +197,28 @@ alias toggletransparency='if grep -q "opacity = 0.8" ~/.config/alacritty/alacrit
 alias toggle='if grep -q "opacity = 0.8" ~/.config/alacritty/alacritty.toml; then sed -i "s/opacity = .*/opacity = 1.0/" ~/.config/alacritty/alacritty.toml; else sed -i "s/opacity = .*/opacity = 0.8/" ~/.config/alacritty/alacritty.toml; fi'
 alias endt15='' # Alias for section footer
 
+# ===========================
+# Port info: port | pid | app path
+# ===========================
+alias t16='====================portinfo============================'
+portinfo() {
+  printf "%-8s | %-8s | %s\n" "PORT" "PID" "APP_PATH"
+  local line port pid app
+  local -a lines
+  lines=(${(f)"$(ss -tlnp 2>/dev/null | tail -n +2)"})
+  for line in $lines; do
+    port=${line[(w)4]}; port=${port##*:}
+    [[ $line =~ "pid=([0-9]+)" ]] || continue
+    pid=${match[1]}
+    app=$(pwdx $pid 2>/dev/null | sed "s/^$pid: //") || continue
+    [[ -n $app ]] || continue
+    printf "%-8s | %-8s | %s\n" "$port" "$pid" "$app"
+  done
+}
+alias endt16='' # Alias for section footer
+
+
+
 # tmux attach or create session
 ts() {
   tmux attach-session -t "$1" || tmux new-session -s "$1"

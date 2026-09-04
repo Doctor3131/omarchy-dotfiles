@@ -18,7 +18,7 @@ size = 12
 padding.x = 0
 padding.y = 0
 decorations = "None"
-opacity = 0.8
+opacity = 0.9
 
 [keyboard]
 bindings = [
