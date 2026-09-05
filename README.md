@@ -79,7 +79,7 @@ Aliases dikelompokkan per section (`t1`..`t16` + `endt*`) agar `show` (`grep -E 
   ```zsh
   portinfo
   # PORT     | PID      | APP_PATH
-  # 3000     | 12345    | /home/sirifari/project/app
+  # 3000     | 12345    | ~/project/app
   ```
   Menggunakan `ss -tlnp` + `pwdx` untuk mapping `port → pid → path`.
 

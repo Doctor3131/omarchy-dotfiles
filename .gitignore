@@ -38,3 +38,9 @@
 # Un-ignore wallpaper folder and its contents
 !wallpaper/
 !wallpaper/**
+
+# Backups — local only (Option A): never track, keeps local snapshots private
+*.bak
+*.bak.*
+*_backup.json
+*.omarchy-upgrade-to-*.bak

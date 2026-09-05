@@ -26,7 +26,7 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH=$HOME/.local/bin:$PATH
-export PATH="$PATH:/home/sirifari/Downloads/balena/bin"
+export PATH="$PATH:$HOME/Downloads/balena/bin"
 # export PATH=$HOME/Dowonloads/Postman:$PATH
 # change alacritty opacity
 # alias transparant="sed -i 's/opacity = .*/opacity = 0.8/' ~/.config/alacritty/alacritty.toml"
@@ -238,7 +238,7 @@ ZLE_RPROMPT_INDENT=0
 export EZA_COLORS="gi=2;37"
 
 # opencode
-export PATH=/home/sirifari/.opencode/bin:$PATH
+export PATH=$HOME/.opencode/bin:$PATH
 export EDITOR=nvim
 
 # composer
@@ -246,14 +246,14 @@ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/sirifari/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/sirifari/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/sirifari/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/sirifari/anaconda3/bin:$PATH"
+        export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -262,7 +262,7 @@ unset __conda_setup
 # eval "$(tv init zsh)"
 eval "$(zoxide init zsh)"
 
-export PATH="$PATH:/home/sirifari/.cargo/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 explorer() {
     # Default to current directory if no argument is provided
