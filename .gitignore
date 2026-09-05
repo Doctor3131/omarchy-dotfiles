@@ -39,6 +39,10 @@
 !wallpaper/
 !wallpaper/**
 
+# Un-ignore foor folder and its contents
+!foot/
+!foot/**
+
 # Backups — local only (Option A): never track, keeps local snapshots private
 *.bak
 *.bak.*
