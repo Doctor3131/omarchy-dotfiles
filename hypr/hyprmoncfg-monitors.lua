@@ -5,6 +5,7 @@ hl.monitor({
   mode = "2880x1800@90.00",
   position = "0x252",
   scale = 2,
+  vrr = 0,
   sdr_min_luminance = 0.2,
   sdr_max_luminance = 80,
 })
@@ -14,6 +15,9 @@ hl.monitor({
   mode = "2560x1440@120.00",
   position = "1440x0",
   scale = 1.25,
+  vrr = 0,
   sdr_min_luminance = 0.2,
   sdr_max_luminance = 80,
 })
+
+hl.config({ input = { touchdevice = { transform = 0 }, tablet = { transform = 0 } } })

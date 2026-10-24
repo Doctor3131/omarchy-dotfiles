@@ -90,7 +90,9 @@ alias ls='eza -lh --git --icons --sort=type --group-directories-first'
 alias ll='eza -lah --git --icons --sort=type --group-directories-first'
 alias lt='eza --tree --icons --sort=type --group-directories-first'
 alias lti='eza -lT --ignore-glob=".git|node_modules" --icons --sort=type --group-directories-first'
-alias lt2='eza --tree --level=2 --icons --sort=type --group-directories-first'
+alias lt1='eza -lh --tree --level=1 --icons --git --sort=type --group-directories-first'
+alias lt2='eza -lh --tree --level=2 --icons --git --sort=type --group-directories-first'
+alias lt3='eza -lh --tree --level=3 --icons --git --sort=type --group-directories-first'
 # cd then ls
 function cdl() { 
     cd "$1" && ls
@@ -240,6 +242,12 @@ export EZA_COLORS="gi=2;37"
 # opencode
 export PATH=$HOME/.opencode/bin:$PATH
 export EDITOR=nvim
+alias oc='opencode'
+alias ocr='opencode run'
+alias occ='opencode run --continue'
+alias ocl='opencode session list'
+alias ocm='opencode models'
+alias ocu='opencode upgrade'
 
 # composer
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
@@ -263,6 +271,8 @@ unset __conda_setup
 eval "$(zoxide init zsh)"
 
 export PATH="$PATH:$HOME/.cargo/bin"
+
+export PATH="$PATH:/usr/local/android-studio/bin"
 
 explorer() {
     # Default to current directory if no argument is provided
@@ -294,3 +304,12 @@ explorer() {
 }
 
 . "$HOME/.local/share/../bin/env"
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
